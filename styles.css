@@ -1,0 +1,266 @@
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+
+.border-red {
+    border: 1px red solid;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap10 {
+    gap: .75rem;
+}
+
+.house-container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+}
+
+.house-img {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px grey;
+    position: relative;
+    margin: 50px 0;
+}
+
+.house-img>img {
+    display: block;
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+    height: auto;
+
+}
+
+.house-address {
+    height: 3.5rem;
+    position: absolute;
+    background-color: rgba(146, 144, 144, 0.75);
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+}
+
+.is-available{
+    text-transform: uppercase;
+    height: 3.5rem;
+    color: red;
+    width: auto;
+    position: relative;
+    z-index: 10;
+    margin: 0 0 0 10px;
+
+}
+
+.google-maps {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+.google-maps > iframe{
+    width: 450px;
+    height: 300px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .house-img {
+      margin: 30px 0;
+    }
+
+    .house-img > img {
+      max-height: none;
+    }
+
+    .google-maps > iframe {
+      width: 250px;
+      height: 150px;
+    }
+
+    .house-address {
+      font-size: 0.9rem;
+      /* height: auto; */
+      /* padding: 0.5rem; */
+    }
+
+
+    .house-container {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .house-container > img,
+    .house-container > .house-img {
+      width: 100%;
+      margin-right: 0 !important;
+      margin-bottom: 20px;
+    }
+
+    .is-available{
+        text-transform: uppercase;
+        color: red;
+        width: auto;
+        position: relative;
+        z-index: 10;
+        position: relative;
+        top: 45px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .is-available > h3{
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 0 10px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .house-img {
+      margin: 20px 0;
+    }
+
+    .house-address {
+      font-size: 0.8rem;
+      height: 2.5rem;
+    }
+
+    .google-maps {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .google-maps > iframe {
+        width: 200px;
+        height: 100px;
+      }
+
+      h3{
+        font-size: 1.5rem;
+      }
+
+      .is-available{
+        text-transform: uppercase;
+        height: 1.75rem;
+        color: red;
+        width: auto;
+        position: relative;
+        z-index: 10;
+        position: relative;
+        top: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .is-available > h3{
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 0 10px;
+    }
+
+  }
