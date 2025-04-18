@@ -58,11 +58,16 @@
     font-style: italic;
 }
 
+h1 {
+    font-size: 5.5rem;
+    text-align: center;
+}
+
 h2 {
     font-size: 2.5rem;
 }
 
-h3{
+h3 {
     font-size: 1.75rem;
 }
 
@@ -90,9 +95,107 @@ h3{
     align-items: center;
 }
 
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
 .gap10 {
     gap: .75rem;
 }
+
+.gap10px {
+    gap: 10px;
+}
+
+body {
+    background-color: #cc2a2c;
+}
+
+.black {
+    color: black;
+}
+
+.black:hover {
+    color: #cc2a2c;
+}
+
+
+
+.top-bar-contact {
+    height: 25px;
+    background-color: lightgray;
+}
+
+.header-container {
+    background-color: white;
+    box-shadow: 5px 5px 5px;
+}
+
+.logo-container>img {
+    width: 150px;
+    height: auto;
+    padding: 0 50px;
+}
+
+.contact-container {
+    display: inline-block;
+}
+
+.menu-items,
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black
+}
+
+.application-link h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.application-link a{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline-color: black;
+}
+
+.application-link>a:hover {
+    color: white;
+    background-color: #cc2a2c;
+      cursor: pointer;
+}
+
+.application-link p{
+    text-align: center;
+}
+
+
+.qr-container>img {
+    width: 250px;
+    height: auto;
+    padding: 5px 50px;
+}
+
 
 .house-container {
     width: 100%;
@@ -104,7 +207,7 @@ h3{
 
 .house-img {
     border: 1px solid black;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
     position: relative;
     margin: 50px 0;
 }
@@ -129,10 +232,10 @@ h3{
 
 }
 
-.is-available{
+.is-available {
     text-transform: uppercase;
     height: 3.5rem;
-    color: red;
+    color: Black;
     width: auto;
     position: relative;
     z-index: 10;
@@ -149,7 +252,7 @@ h3{
     z-index: 10;
 }
 
-.google-maps > iframe{
+.google-maps>iframe {
     width: 450px;
     height: 300px;
 }
@@ -157,43 +260,62 @@ h3{
 
 
 @media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
     h2 {
-      font-size: 2rem;
+        font-size: 2rem;
+    }
+
+    .logo-container>img,
+    .qr-container>img {
+        padding: 0 5px;
+    }
+
+    .application-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .application-link a{
+        margin-top: 5px;
+
     }
 
     .house-img {
-      margin: 30px 0;
+        margin: 30px 0;
     }
 
-    .house-img > img {
-      max-height: none;
+    .house-img>img {
+        max-height: none;
     }
 
-    .google-maps > iframe {
-      width: 250px;
-      height: 150px;
+    .google-maps>iframe {
+        width: 250px;
+        height: 150px;
     }
 
     .house-address {
-      font-size: 0.9rem;
-      /* height: auto; */
-      /* padding: 0.5rem; */
+        font-size: 0.9rem;
     }
 
 
     .house-container {
-      flex-direction: column;
-      padding: 0;
+        flex-direction: column;
+        padding: 0;
     }
 
-    .house-container > img,
-    .house-container > .house-img {
-      width: 100%;
-      margin-right: 0 !important;
-      margin-bottom: 20px;
+    .house-container>img,
+    .house-container>.house-img {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
     }
 
-    .is-available{
+    .is-available {
         text-transform: uppercase;
         color: red;
         width: auto;
@@ -207,43 +329,74 @@ h3{
 
     }
 
-    .is-available > h3{
+    .is-available>h3 {
         background-color: rgba(255, 255, 255, 0.75);
         padding: 0 10px;
     }
 
-  }
+}
 
 
-  @media screen and (max-width: 480px) {
-    h2 {
-      font-size: 1.75rem;
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 3.5rem;
     }
 
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .top-bar-contact p{
+        font-size: .75rem;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .application-link{
+        padding-top: 15px;
+    }
+
+    .application-link h2{
+        font-size: 1.25rem;
+    }
+
+    .application-link p{
+        text-align: center;
+        font-size: 1rem;
+    }
+    .qr-container{
+        display: none;
+    }
+
+
+
     .house-img {
-      margin: 20px 0;
+        margin: 20px 0;
     }
 
     .house-address {
-      font-size: 0.8rem;
-      height: 2.5rem;
+        font-size: 0.8rem;
+        height: 2.5rem;
     }
 
     .google-maps {
-      margin-right: 5px;
-      margin-bottom: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
     }
 
-    .google-maps > iframe {
+    .google-maps>iframe {
         width: 200px;
         height: 100px;
-      }
+    }
 
-      h3{
+    h3 {
         font-size: 1.5rem;
-      }
+    }
 
-      .is-available{
+    .is-available {
         text-transform: uppercase;
         height: 1.75rem;
         color: red;
@@ -258,9 +411,9 @@ h3{
 
     }
 
-    .is-available > h3{
+    .is-available>h3 {
         background-color: rgba(255, 255, 255, 0.75);
         padding: 0 10px;
     }
 
-  }
+}
